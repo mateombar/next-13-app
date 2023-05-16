@@ -2,9 +2,10 @@ import { resolve } from "styled-jsx/css";
 
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
-    next: { revalidate: 60 },
-  }).then((res) => res.json());
+  throw new Error("Error while loading the comments");
+  // return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
+  //   next: { revalidate: 60 },
+  // }).then((res) => res.json());
 };
 
 export default async function Comments({ params }) {
