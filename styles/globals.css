@@ -69,6 +69,17 @@ a {
   margin-top: 32px;
 }
 
+.fnt-12 {
+  font-size: 12px;
+}
+
+.comments {
+  font-size: 12px;
+  background-color: #cecece;
+  list-style: none;
+  padding: 16px 0px 8px 16px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
