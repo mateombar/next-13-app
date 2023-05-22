@@ -1,5 +1,6 @@
 import { Navigation } from "./components/Navigation";
 import "../styles/globals.css";
+import { inter } from "./fonts";
 
 export const metadata = {
   title: "Next.js",
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Using nextjs</title>
       </head>
-      <body>
+      <body className={inter.className}>
         <Navigation />
         {children}
       </body>
