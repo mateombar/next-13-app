@@ -1,4 +1,4 @@
-import { resolve } from "styled-jsx/css";
+import Image from "next/image";
 
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -16,6 +16,12 @@ export default async function Comments({ params }) {
     <ul className="comments">
       {comments.map((comment) => (
         <li className="mt-2" key={comment.id}>
+          <Image
+            alt={comment.name}
+            src={`https://api.dicebear.com/6.x/pixel-art/svg?seed=${comment.email}`}
+            width={50}
+            height={50}
+          />
           <h3 className="mb-2">{comment.name}</h3>
           <p>{comment.body}</p>
         </li>
